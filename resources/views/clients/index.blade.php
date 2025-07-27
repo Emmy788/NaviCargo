@@ -41,7 +41,7 @@
     <!-- Table -->
     <div class="w-full overflow-x-auto bg-white shadow rounded-lg">
         <table class="w-full min-w-[600px] text-left text-sm">
-            <thead class="bg-gray-100 border uppercase text-xs ">
+            <thead class="bg-gray-100 border uppercase text-xs">
                 <tr>
                     <th class="px-4 py-2 ">Company Name</th>
                     <th class="px-4 py-2 ">Contact Name</th>

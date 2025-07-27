@@ -14,6 +14,7 @@
             <div class="space-x-4">
                 <a href="{{ route('clients.index') }}" class="text-gray-700 hover:text-blue-600">Clients</a>
                 <a href="{{ route('cargo.index') }}" class="text-gray-700 hover:text-blue-600">Cargo</a>
+                <a href="{{ route('crew.index') }}" class="text-gray-700 hover:text-blue-600">Crew</a>
                 <a href="{{ route('ships.index') }}" class="text-gray-700 hover:text-blue-600">Ships</a>
                 <a href="{{ route('ports.index') }}" class="text-gray-700 hover:text-blue-600">Ports</a>
                 <a href="{{ route('shipments.index') }}" class="text-gray-700 hover:text-blue-600">Shipments</a>

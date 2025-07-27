@@ -3,14 +3,15 @@
 @section('title', 'Crew Members')
 
 @section('content')
-<div class="w-full">
+<div class="container mx-auto">
+
     <!-- Page Title -->
     <div class="flex justify-center mb-6">
-        <h2 class="text-4xl font-extrabold text-gray-800">Crew Members</h2>
+        <h2 class="text-5xl font-extrabold text-gray-800 mb-10">Crew Members</h2>
     </div>
 
     <!-- Actions: Filter + Add Crew -->
-    <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 bg-white p-4 rounded-lg shadow">
         <form method="GET" action="{{ route('crew.index') }}" class="flex flex-wrap gap-4 items-center">
             <select name="role" class="px-3 py-2 border border-gray-300 rounded">
                 <option value="">All Roles</option>
@@ -36,33 +37,35 @@
                 <option value="0" {{ request('is_active') === '0' ? 'selected' : '' }}>Inactive</option>
             </select>
 
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            <button type="submit" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
                 Filter
             </button>
         </form>
 
-        <a href="{{ route('crew.create') }}" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        <a href="{{ route('crew.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600 flex justify-center items-center">
             + Add Crew
         </a>
     </div>
-
-    {{-- Crew Table --}}
-    <div class="overflow-x-auto bg-white rounded shadow">
-        <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-100 text-left text-sm font-semibold text-gray-700">
-                <tr>
-                    <th class="px-4 py-3">Name</th>
-                    <th class="px-4 py-3">Role</th>
-                    <th class="px-4 py-3">Phone</th>
-                    <th class="px-4 py-3">Ship</th>
-                    <th class="px-4 py-3">Nationality</th>
-                    <th class="px-4 py-3">Status</th>
-                    <th class="px-4 py-3">Actions</th>
+</div>
+    
+    <!-- Crew Table -->
+    <div class="w-full overflow-x-auto bg-white shadow rounded-lg">
+        <table class="w-full min-w-[600px] text-left text-sm">
+            <thead class="bg-gray-100 uppercase text-xs">
+                <tr class="bg-gray-100 text-left px-4 py-2 border">
+                    <th class="text-left px-4 py-2">Name</th>
+                    <th class="text-left px-4 py-2">Role</th>
+                    <th class="text-left px-4 py-2">Phone</th>
+                    <th class="text-left px-4 py-2">Ship</th>
+                    <th class="text-left px-4 py-2">Nationality</th>
+                    <th class="text-left px-4 py-2">Status</th>
+                    <th class="text-left px-4 py-2">Actions</th>
                 </tr>
             </thead>
-            <tbody class="divide-y divide-gray-100 text-sm">
+
+            <tbody>
                 @forelse($crew as $member)
-                    <tr>
+                    <tr class="border hover:bg-gray-50 ">
                         <td class="px-4 py-2">{{ $member->first_name }} {{ $member->last_name }}</td>
                         <td class="px-4 py-2">{{ $member->role }}</td>
                         <td class="px-4 py-2">{{ $member->phone_number }}</td>

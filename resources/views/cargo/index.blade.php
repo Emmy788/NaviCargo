@@ -42,9 +42,9 @@
     <div class="w-full overflow-x-auto bg-white shadow rounded-lg">
         <table class="w-full min-w-[600px] text-left text-sm">
             <thead class="bg-gray-100 uppercase text-xs ">
-                <tr class="bg-gray-100 text-left px-4 py-2">
+                <tr class="bg-gray-100 text-left px-4 py-2 border">
                     <th class="text-left px-4 py-2">Client</th>
-                    <th class="text-left px-4 py-2 p-2">Description</th>
+                    <th class="text-left px-4 py-2">Description</th>
                     <th class="text-left px-4 py-2">Weight (kg)</th>
                     <th class="text-left px-4 py-2">Volume (m³)</th>
                     <th class="text-left px-4 py-2">Type</th>
@@ -55,7 +55,7 @@
 
             <tbody>
                 @foreach($cargo as $item)
-                <tr class="{{ $item->cargo_type == 'dangerous' ? 'bg-red-100' : 'hover:bg-gray-50' }} border-t">
+                <tr class="{{ $item->cargo_type == 'dangerous' ? 'bg-red-100' : 'hover:bg-gray-50' }} border">
                     <td class="px-4 py-2">{{ $item->client->company_name ?? 'N/A'}}</td>
                     <td class="p-2">{{ $item->description }}</td>
                     <td class="px-4 py-2">{{ $item->weight }}</td>
