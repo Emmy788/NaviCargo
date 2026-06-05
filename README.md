@@ -1,61 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NaviCargo — Global Cargo Shipping Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack maritime logistics management system built with Laravel and PHP.
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+NaviCargo is a comprehensive maritime logistics platform built to facilitate, track, and optimize cargo shipping across continents. Developed during an internship at the **ICT Authority of Kenya (ICTA)** as part of the government's digital skills program.
 
-## Learning Laravel
+The system integrates all key components of maritime cargo logistics into one platform — ships, crew, ports, cargo, clients, and shipments.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Modules:**
+- **Ship Management** — register ships, track location, manage fleet status
+- **Crew Management** — assign crew members to ships, manage roles and activity
+- **Port Management** — register ports with coordinates, capacity, and customs status
+- **Cargo Management** — create and track cargo records linked to clients
+- **Shipment Management** — schedule shipments, track status (Pending, In Transit, Delivered, Delayed)
+- **Client Management** — manage client companies and their cargo history
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Preview
 
-## Laravel Sponsors
+<img width="1916" height="809" alt="image" src="https://github.com/user-attachments/assets/7c506c22-882a-4a78-a2fe-2bc27c428d91" />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<img width="1920" height="840" alt="image" src="https://github.com/user-attachments/assets/f202f5d3-0ecb-4790-8a19-f1bf5de965ed" />
 
-### Premium Partners
+<img width="1920" height="839" alt="image" src="https://github.com/user-attachments/assets/c99e1411-d9fc-443b-ad88-9f33030c61d4" />
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+<img width="1920" height="813" alt="image" src="https://github.com/user-attachments/assets/860c1154-5f97-46ea-b6cb-ceda506ec31d" />
 
-## Contributing
+<img width="1918" height="841" alt="image" src="https://github.com/user-attachments/assets/a191235a-4fbf-4ee0-9da3-6a1b6809d5db" />
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Getting started
 
-## Security Vulnerabilities
+```bash
+git clone https://github.com/Emmy788/NaviCargo.git
+cd NaviCargo
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Then open `http://localhost:8000` in your browser.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Tech stack
+
+- **Backend** — Laravel (PHP)
+- **Frontend** — Blade templates, Bootstrap
+- **Database** — MySQL
+
+---
+
+## What I learned
+
+- Building a full MVC application with Laravel
+- Designing and implementing relational database schemas
+- Managing complex model relationships (ships, crew, cargo, shipments)
+- Working with Laravel migrations, routes, and controllers
+- Developing real-world software under professional supervision
+
+---
+
+## Built at
+
+This project was built as **Internship Project No. 3** during an attachment at the **ICT Authority of Kenya (ICTA)** 🇰🇪
+
+---
+
+## Author
+
+**Emmy** · [GitHub](https://github.com/Emmy788) · [emeraldmwaniga80@gmail.com](mailto:emeraldmwaniga80@gmail.com)
