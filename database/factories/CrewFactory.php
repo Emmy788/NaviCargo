@@ -15,13 +15,16 @@ class CrewFactory extends Factory
         return [
             'first_name' => $this->faker->firstName,
             'last_name' => $this->faker->lastName,
-            'role' => $this->faker->randomElement(['Captain', 'Chief Officer', 'Able Seaman',
-            'Ordinary Seaman', 'Engine Cadet', 'Radio Officer',
-            'Chief Cook', 'Steward', 'Deckhand']),
+            'role' => $this->faker->randomElement(['Captain', 'Chief Officer', 'Able Seaman', 'Ordinary Seaman',
+                'Engine Cadet', 'Radio Officer', 'Chief Cook', 'Steward', 'Deckhand','Ordinary Seaman', 
+                'Radio Officer', 'Steward', 'Deckhand', 'Other']),
             'phone_number' => $this->faker->unique()->phoneNumber,
             'nationality' => $this->faker->country,
             'ship_id' => \App\Models\Ship::inRandomOrder()->first()?->id,
-            'is_active' => true,
+            'status' => $this->faker->randomElement([
+                ...array_fill(0, 8, 'active'),  // 8 out of 10 = 80%
+                ...array_fill(0, 2, 'inactive') // 2 out of 10 = 20%
+            ]),
         ];
     }
 }

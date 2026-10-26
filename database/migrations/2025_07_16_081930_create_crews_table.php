@@ -39,7 +39,7 @@ class CreateCrewsTable extends Migration
             $table->string('phone_number', 30)->unique();
             $table->string('nationality', 100)->nullable();
 
-            $table->boolean('is_active')->default(true);
+            $table->enum('status', ['active', 'inactive', 'on-leave', 'retired', 'fired'])->default('active');
 
             $table->timestamps();
         });

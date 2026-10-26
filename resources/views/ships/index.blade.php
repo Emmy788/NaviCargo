@@ -4,8 +4,8 @@
 
 @section('content')
     <!-- Page Title -->
-    <div class="w-full flex justify-center">
-        <h2 class="text-4xl font-extrabold text-gray-800 mb-8">Ships</h2>
+    <div class="flex justify-center mb-6">
+        <h2 class="text-5xl font-extrabold text-gray-800 mb-8">Ships</h2>
     </div>
 
     <!-- Search, Filter, and Add Ship -->

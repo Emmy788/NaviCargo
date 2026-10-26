@@ -72,9 +72,12 @@
                         <td class="px-4 py-2">{{ $member->ship?->name ?? 'Unassigned' }}</td>
                         <td class="px-4 py-2">{{ $member->nationality ?? '-' }}</td>
                         <td class="px-4 py-2">
-                            <span class="{{ $member->is_active ? 'text-green-700' : 'text-red-700' }}">
-                                {{ $member->is_active ? 'Active' : 'Inactive' }}
+                            <span class="inline-block px-2 py-1 text-sm font-semibold rounded
+                                @if ($member->status === 'active') bg-green-100 text-green-800
+                                @else bg-red-100 text-red-800 @endif">
+                                {{ ucfirst($member->status) }}
                             </span>
+
                         </td>
                         <td class="px-4 py-2 flex gap-2">
                             <a href="{{ route('crew.edit', $member) }}" class="text-blue-600 hover:underline">Edit</a>
